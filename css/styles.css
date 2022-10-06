@@ -1,6 +1,6 @@
 /*
-Author: Maria Cruz
-Date: Current Date
+Author: Leo Wills
+Date: 10/5/2022
 File Name: styles.css
 */
 
@@ -93,7 +93,7 @@ main p {
 }
 
 .round {
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
 #contact {
@@ -138,4 +138,85 @@ footer {
 footer a {
     color: #4645a8;
     text-decoration: none;
+}
+/*Media query for tablet viewport*/
+@media screen and (min-width: 550px), print {
+
+/*tablet viewport: show tab-desk class, hide mobile*/
+span.tab-task{
+  display: block;
+  }
+.mobile{
+  display: none;
+}
+  /*tablet viewport: style rule for header content*/
+  span.tab-task{
+    display: inline;
+  }
+  /*tablet viewport: Style rules for nav area.*/
+  nav li{
+    display: inline-block;
+    font-size: 1.5em;
+    border-right: 1px solid;
+    color: #e5e9fc
+  }
+  nav li:last-child{
+      border-right-style: none;
+  }
+  nav li{
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+/*viewport: style rule for map.*/
+  .map{
+    width: 500px;
+    height: 450px;
+  }
+
+}
+/*Media query for desktop viewport*/
+@media screen and (min-width: 769px){
+
+/*desktop viewport: style rule of header*/
+header {
+    padding: 2%;
+    }
+/*Desktop viewport: Style rules for nav area */
+nav li{
+  padding: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+}
+
+nav li:hover{
+  color:#373684;
+  background-color: #efe9fc;
+}
+/*desktop viewport: style rules for main content.*/
+#info ul{
+    margin-left: 5%;
+}
+main h3{
+  font-size: 1.5em;
+}
+#piano, #guitar, #violin{
+  width: 29%;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+}
+/*Media query for print*/
+@media print{
+  body{
+    background-color: #fff;
+    color: #000;
+  }
 }
